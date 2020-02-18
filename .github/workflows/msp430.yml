@@ -10,4 +10,4 @@ jobs:
     - name: Checkout source code
       uses: actions/checkout@v2
     - name: Use docker action to clean and build the repo
-      uses: actions/msp430-build-action@v1
+      uses: dchaves/msp430-build-action@v1
