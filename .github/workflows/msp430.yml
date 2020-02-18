@@ -1,0 +1,13 @@
+name: Build with MSP430 environment
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build the code
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v2
+    - name: Use docker action to clean and build the repo
+      uses: actions/msp430-build-action
