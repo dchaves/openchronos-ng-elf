@@ -1,13 +1,7 @@
 GENERAL INFORMATION 
 ===================
 
-Origin: [github.com/BenjaminSoelberg/openchronos-ng-elf](https://github.com/BenjaminSoelberg/openchronos-ng-elf)
-
-Latest build status on Circle CI: [circleci.com/gh/BenjaminSoelberg/openchronos-ng-elf](https://circleci.com/gh/BenjaminSoelberg/openchronos-ng-elf) ![Circle CI](https://circleci.com/gh/BenjaminSoelberg/openchronos-ng-elf.svg?style=svg)
-
-Releases and snapshot & firmware: [github.com/BenjaminSoelberg/openchronos-ng-elf/releases](https://github.com/BenjaminSoelberg/openchronos-ng-elf/releases)
-
-We use Slack to communicate, you are welcome to join us at: [openchronos.slack.com](https://openchronos.slack.com) juse shoot me an [email](mailto://benjamin.soelberg@gmail.com)
+![Build with MSP430 environment](https://github.com/dchaves/openchronos-ng-elf/workflows/Build%20with%20MSP430%20environment/badge.svg)
 
 INTRODUCTION
 ============
@@ -24,54 +18,12 @@ openchronos-ng is a major rework of openchronos. Compared to openchronos it has 
 
 The firmware code is also conceptually simpler and smaller which leaves room for more modules (applications).
 
-This repository is a fork of (seems unmaintained) :
-[http://sourceforge.net/projects/openchronos-ng/](http://sourceforge.net/projects/openchronos-ng)
+This repository is a fork of:
+[github.com/BenjaminSoelberg/openchronos-ng-elf](https://github.com/BenjaminSoelberg/openchronos-ng-elf)
 
 INSTALLATION
 ============
-
-Linux/Ubuntu 64 bit installation preparation
----------------------------------------------
-If you are running on a 64 bit Ubuntu system you need to install some packages first:
-
-```sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6 python-urwid```
-
-
-Linux/Fedora 64 bit installation preparation
----------------------------------------------
-If you are running on a 64 bit Fedora system you need to install some packages first:
-
-```sudo dnf install ncurses-libs.i686 zlib.i686 libstdc++.i686 python-urwid```
-
-
-Compiler and debugger installation
-----------------------------------
-
-Download the open source MSP430 GCC compiler from TI here:
-
-[http://www.ti.com/tool/msp430-gcc-opensource](http://www.ti.com/tool/msp430-gcc-opensource)
-
-**Please note that the installer is a 32 bit binary and will exit with no error if above dependencies isn't available on your system.**
-
-Execute :
-
-```
-chmod +x msp430-gcc-full-linux-installer-3.5.0.0.run
-./msp430-gcc-full-linux-installer-3.5.0.0.run
-sudo apt-get install mspdebug
-```
-
-Add this to your .profile
-```
-export MSP430_TI=~/ti/gcc
-export PATH=$PATH:$MSP430_TI/bin
-```
-
-Run the following command to add exports to your current shell (including the dot):
-```
-. ~/.profile
-```
-or add it to your .bashrc.
+Docker image with the MSP430 toolchain: [https://github.com/dchaves/msp430-build-action](https://github.com/dchaves/msp430-build-action)
 
 Support package
 ----------------
