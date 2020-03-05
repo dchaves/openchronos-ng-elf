@@ -42,7 +42,7 @@ static union {
 } alarm_state;
 
 static uint8_t tmp_hh, tmp_mm;
-static note chime_notes[2] = {0x1931, 0x000F};
+static note chime_notes[11] = {0x25b7, 0x2590, 0x25b7, 0x2590, 0x25b5, 0x25b7, 0x2590, 0x25ba, 0x2590, 0x25b7, 0x000F};
 static note alarm_notes[4] = {0x3234, 0x1900, 0x3234, 0x000F};
 
 static void print_mm (void)
